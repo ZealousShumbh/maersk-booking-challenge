@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "04d9b29b-0db5-467a-9f7c-b9ef56addf35",
+		"name": "Maersk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/bookings/getallbookings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"getallbookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/bookings/getbookingbyid/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"getbookingbyid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking by Container Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/bookings/getbookingbyid/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"getbookingbyid",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Repetitive Bookings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"containerType\": \"FREEZER\",\r\n    \"containerSize\": 20,\r\n    \"origin\": \"Southampton\",\r\n    \"destination\": \"Singapore\",\r\n    \"quantity\": 100,\r\n    \"timestamp\": \"2020-10-12T13:53:09Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/bookings/addbooking/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"addbooking",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"containerType\": \"DRY\",\r\n    \"containerSize\": 20,\r\n    \"origin\": \"Southampton\",\r\n    \"destination\": \"Singapore\",\r\n    \"quantity\": -1,\r\n    \"timestamp\": \"2020-10-12T13:53:09Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/bookings/getavailability",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"getavailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Single Booking Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"containerType\": \"DRY\",\r\n    \"containerSize\": 20,\r\n    \"origin\": \"Southampton\",\r\n    \"destination\": \"Singapore\",\r\n    \"quantity\": -1,\r\n    \"timestamp\": \"2020-10-12T13:53:09Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/bookings/addbooking",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bookings",
+						"addbooking"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
